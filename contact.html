@@ -1,34 +1,31 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-<title>Contact - Sahil Tech Solutions</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header>
-<div class="logo">STS</div>
-<hr>
-<div class="brand">Sahil Tech Solutions</div>
-</header>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="projects.html">Projects</a>
-<a href="contact.html">Contact Us</a>
-</nav>
 
 <section class="section">
 <h1>Contact Us</h1>
-<p>Email: your@email.com</p>
-<p>Phone: +91 7204458256</p>
+
+<form onsubmit="sendToWhatsApp(); return false;">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Your Email" required>
+<textarea id="message" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+
 </section>
 
-<footer>
-© 2026 Sahil Tech Solutions
-</footer>
+<script>
+function sendToWhatsApp(){
 
-</body>
-</html>
+var name = document.getElementById("name").value;
+var email = document.getElementById("email").value;
+var message = document.getElementById("message").value;
+
+var phoneNumber = "917204458256"; // 👈 YAHAN APNA NUMBER DAL
+
+var url = "https://wa.me/" + phoneNumber + "?text="
++ "Name: " + name + "%0a"
++ "Email: " + email + "%0a"
++ "Message: " + message;
+
+window.open(url, '_blank');
+}
+</script>
