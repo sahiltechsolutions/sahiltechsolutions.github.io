@@ -1,134 +1,173 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body{
-background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#000);
-background-size:400% 400%;
-animation:gradient 12s ease infinite;
-color:white;
-font-size:18px;
+body {
+    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#000);
+    background-size: 400% 400%;
+    animation: gradient 12s ease infinite;
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
 }
 
-@keyframes gradient{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+@keyframes gradient {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
 }
 
-header{
-text-align:center;
-padding:20px;
-background:rgba(0,0,0,0.7);
+header {
+    text-align: center;
+    background: rgba(0,0,0,0.7);
+    padding: 15px 10px;
 }
 
-.logo img{
-width:120px;
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.brand{
-font-size:22px;
-margin-top:10px;
-font-weight:bold;
+.logo {
+    width: 120px;
+    margin-bottom: 10px;
 }
 
-nav{
-text-align:center;
-background:rgba(0,0,0,0.8);
-padding:12px;
+header h1 {
+    font-size: 22px;
+    margin-top: 5px;
 }
 
-nav a{
-color:white;
-margin:0 20px;
-text-decoration:none;
-font-weight:bold;
-font-size:18px;
+nav {
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+    padding: 12px 0;
 }
 
-nav a:hover{
-color:#00c6ff;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.section{
-padding:60px 20px;
-text-align:center;
+nav a:hover {
+    color: #00c6ff;
 }
 
-.card{
-background:rgba(255,255,255,0.1);
-padding:25px;
-margin:20px auto;
-width:280px;
-border-radius:10px;
-font-size:17px;
+.hero {
+    text-align: center;
+    padding: 50px 20px;
 }
 
-button{
-padding:12px 25px;
-background:#00c6ff;
-border:none;
-color:white;
-border-radius:6px;
-cursor:pointer;
-font-size:16px;
+.hero h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
-button:hover{
-background:#0099cc;
+.hero p {
+    font-size: 20px;
 }
 
-/* FORM STYLE */
-
-form{
-max-width:400px;
-margin:auto;
-text-align:left;
+.projects {
+    text-align: center;
+    padding: 30px 20px;
 }
 
-input, textarea{
-width:100%;
-padding:10px;
-margin:10px 0;
-border:none;
-border-radius:5px;
-font-size:16px;
+.project-box {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    margin: 15px auto;
+    width: 95%;
+    max-width: 400px;
+    border-radius: 10px;
+    font-size: 18px;
 }
 
-textarea{
-height:100px;
-resize:none;
+.about {
+    text-align: center;
+    padding: 30px 20px;
 }
 
-footer{
-background:black;
-text-align:center;
-padding:15px;
-margin-top:40px;
-}
-.about-container{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-align-items:center;
-gap:30px;
-margin-top:30px;
+.about-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #00c6ff;
+    margin-bottom: 15px;
 }
 
-.about-img{
-width:200px;
-height:200px;
-object-fit:cover;
-border-radius:50%;
-border:4px solid #00c6ff;
+.about p {
+    font-size: 18px;
 }
 
-.about-text{
-max-width:400px;
-font-size:18px;
+form {
+    max-width: 400px;
+    margin: auto;
+    text-align: left;
 }
 
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
 
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+button {
+    padding: 12px 25px;
+    background: #00c6ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #0099cc;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+    }
+    nav a {
+        display: block;
+        margin: 8px 0;
+        font-size: 18px;
+    }
+    .hero h2 {
+        font-size: 24px;
+    }
+    .hero p {
+        font-size: 18px;
+    }
+    .project-box {
+        font-size: 16px;
+    }
+    .about p {
+        font-size: 16px;
+    }
+}
