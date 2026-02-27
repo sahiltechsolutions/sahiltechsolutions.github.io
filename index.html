@@ -2,31 +2,148 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Business Website Demo</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahil Tech Solutions</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f6f9;
+      color: #333;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #3b82f6;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(to right, #3b82f6, #6366f1);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      background: white;
+      color: #3b82f6;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #111827;
+      color: white;
+    }
+
+    .services {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .services h3 {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    .service-box {
+      display: inline-block;
+      width: 280px;
+      background: white;
+      padding: 20px;
+      margin: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .service-box h4 {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-  <h1>ABC Business</h1>
-  <p>Professional Business Solutions</p>
+  <h1>Sahil Tech Solutions</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="business-demo/">Projects</a>
+  </nav>
 </header>
 
-<section>
-  <h2>Our Services</h2>
-  <ul>
-    <li>Website Development</li>
-    <li>Digital Marketing</li>
-    <li>App Design</li>
-  </ul>
+<section class="hero">
+  <h2>We Build Modern Websites</h2>
+  <p>Professional, Fast & Affordable Web Development Services</p>
+  <a href="#services" class="btn">Get Started</a>
 </section>
 
-<section>
-  <a href="contact.html" class="btn">Contact Us</a>
+<section class="services" id="services">
+  <h3>Our Services</h3>
+
+  <div class="service-box">
+    <h4>Business Websites</h4>
+    <p>Modern and responsive websites for businesses.</p>
+  </div>
+
+  <div class="service-box">
+    <h4>Portfolio Websites</h4>
+    <p>Clean and stylish personal portfolio designs.</p>
+  </div>
+
+  <div class="service-box">
+    <h4>Website Maintenance</h4>
+    <p>Ongoing support and updates for your website.</p>
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 Business Demo by Sahil Tech Solutions</p>
+  <p>© 2026 Sahil Tech Solutions | All Rights Reserved</p>
 </footer>
 
 </body>
