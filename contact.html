@@ -3,49 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - Sahil Tech Solutions</title>
-<link rel="stylesheet" href="style.css">
+<title>Contact | Sahil Tech Solutions</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
+    background-size:400% 400%;
+    animation:gradientMove 10s ease infinite;
+    color:white;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Navbar */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    backdrop-filter:blur(10px);
+    background:rgba(255,255,255,0.1);
+}
+
+.logo{
+    font-weight:bold;
+    font-size:22px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    margin-left:25px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+/* Contact Section */
+.contact-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:90vh;
+}
+
+.form-box{
+    background:white;
+    color:#111;
+    padding:40px;
+    border-radius:15px;
+    width:400px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.form-box h2{
+    margin-bottom:20px;
+    text-align:center;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    background:#2563eb;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#0f172a;
+}
+
+footer{
+    text-align:center;
+    padding:15px;
+    background:#0f172a;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <div class="logo-container">
-        <img src="logo.png" alt="STS Logo" class="logo">
-        <h1>Sahil Tech Solutions</h1>
-    </div>
+    <div class="logo">Sahil Tech Solutions</div>
     <nav>
         <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
         <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
+        <a href="index.html#services">Services</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
-<section class="section">
-    <h2>Contact Me</h2>
+<div class="contact-container">
+    <div class="form-box">
+        <h2>Contact Us</h2>
 
-    <form action="https://formspree.io/f/mykdpzaq" method="POST">
+        <form action="https://formspree.io/f/mykdqzaq" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
 
-        <input type="text" name="name" placeholder="Your Name" required>
-
-        <input type="email" name="email" placeholder="Your Email" required>
-
-        <textarea name="message" placeholder="Your Message" required></textarea>
-
-        <input type="hidden" name="_subject" value="New Message from Sahil Tech Solutions">
-
-        <button type="submit">Send Message</button>
-
-    </form>
-
-    <p>Email: sahiltechsolutions415@gmail.com</p>
-    <p>WhatsApp: +917204458256</p>
-
-</section>
+    </div>
+</div>
 
 <footer>
-    <p>© 2026 Sahil Tech Solutions</p>
+    © 2026 Sahil Tech Solutions | All Rights Reserved
 </footer>
 
 </body>

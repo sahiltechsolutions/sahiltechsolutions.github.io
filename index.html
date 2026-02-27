@@ -1,150 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sahil Tech Solutions</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sahil Tech Solutions</title>
 
-    body {
-      background: #f4f6f9;
-      color: #333;
-    }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior:smooth;
+}
 
-    header {
-      background: #111827;
-      color: white;
-      padding: 20px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+/* Animated Gradient Background */
+body{
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #2563eb, #0ea5e9);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    color:white;
+}
 
-    header h1 {
-      font-size: 24px;
-    }
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-    }
+/* Glass Navbar */
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter:blur(10px);
+    background:rgba(255,255,255,0.1);
+    border-bottom:1px solid rgba(255,255,255,0.2);
+    z-index:1000;
+}
 
-    nav a:hover {
-      color: #3b82f6;
-    }
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
 
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(to right, #3b82f6, #6366f1);
-      color: white;
-    }
+nav a{
+    text-decoration:none;
+    color:white;
+    margin-left:25px;
+    font-weight:500;
+    transition:0.3s;
+}
 
-    .hero h2 {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
+nav a:hover{
+    color:#38bdf8;
+}
 
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 25px;
-    }
+/* Hero */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
 
-    .btn {
-      padding: 12px 25px;
-      background: white;
-      color: #3b82f6;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
 
-    .btn:hover {
-      background: #111827;
-      color: white;
-    }
+.hero p{
+    font-size:20px;
+    max-width:600px;
+    margin-bottom:30px;
+}
 
-    .services {
-      padding: 60px 20px;
-      text-align: center;
-    }
+/* Glow Button */
+.btn{
+    padding:14px 35px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#2563eb;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 0 15px rgba(255,255,255,0.6);
+}
 
-    .services h3 {
-      font-size: 30px;
-      margin-bottom: 30px;
-    }
+.btn:hover{
+    background:#0f172a;
+    color:white;
+    box-shadow:0 0 25px #38bdf8;
+}
 
-    .service-box {
-      display: inline-block;
-      width: 280px;
-      background: white;
-      padding: 20px;
-      margin: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+/* Sections */
+section{
+    padding:100px 60px;
+    text-align:center;
+    background:white;
+    color:#111;
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s ease;
+}
 
-    .service-box h4 {
-      margin-bottom: 10px;
-    }
+section.show{
+    opacity:1;
+    transform:translateY(0);
+}
 
-    footer {
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+section h2{
+    margin-bottom:20px;
+    font-size:35px;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#0f172a;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Sahil Tech Solutions</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#services">Services</a>
-    <a href="business-demo/">Projects</a>
-  </nav>
+    <div class="logo">Sahil Tech Solutions</div>
+    <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
-
 <section class="hero">
-  <h2>We Build Modern Websites</h2>
-  <p>Professional, Fast & Affordable Web Development Services</p>
-  <a href="#services" class="btn">Get Started</a>
+    <div class="hero-content">
+        <h1>Hi, I'm Sahil 👋</h1>
+        <h2>Web Developer | UI Designer | Business Website Creator</h2>
+        <p>I create modern, responsive and professional websites for businesses and startups.</p>
+        <a href="projects.html" class="btn">View My Work</a>
+        <a href="contact.html" class="btn-outline">Hire Me</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="myphoto.jpg" alt="Sahil">
+    </div>
+</section>
+<section id="projects">
+    <h2>Our Projects</h2>
+    <p>Premium business & portfolio websites built with clean design.</p>
 </section>
 
-<section class="services" id="services">
-  <h3>Our Services</h3>
+<section id="about">
+    <h2>About Us</h2>
+    <p>We help brands grow online with high-performance responsive websites.</p>
+</section>
 
-  <div class="service-box">
-    <h4>Business Websites</h4>
-    <p>Modern and responsive websites for businesses.</p>
-  </div>
+<section id="services">
+    <h2>Our Services</h2>
+    <p>Business Websites, Portfolio Sites, Landing Pages & Maintenance.</p>
+</section>
 
-  <div class="service-box">
-    <h4>Portfolio Websites</h4>
-    <p>Clean and stylish personal portfolio designs.</p>
-  </div>
-
-  <div class="service-box">
-    <h4>Website Maintenance</h4>
-    <p>Ongoing support and updates for your website.</p>
-  </div>
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: sahiltechsolutions415@gmail.com</p>
 </section>
 
 <footer>
-  <p>© 2026 Sahil Tech Solutions | All Rights Reserved</p>
+    © 2026 Sahil Tech Solutions | All Rights Reserved
 </footer>
+
+<script>
+/* Scroll Reveal Animation */
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if(sectionTop < windowHeight - 100){
+            section.classList.add("show");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
