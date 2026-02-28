@@ -12,12 +12,14 @@ body{
     color:white;
 }
 
-/* TOP BAR */
+/* TOP BAR - thoda bada */
 .topbar{
     background:#2563eb;
     text-align:center;
-    padding:8px;
-    font-size:20px;
+    padding:12px;  /* pehle 8px tha */
+    font-size:22px;  /* pehle 20px tha */
+    font-weight:500;
+    letter-spacing:1px;
 }
 
 /* NAVBAR */
@@ -25,20 +27,22 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 60px;
+    padding:25px 60px;  /* pehle 20px tha */
     background:rgba(255,255,255,0.05);
     backdrop-filter:blur(10px);
 }
 
 .logo{
-    font-size:22px;
+    font-size:28px;  /* pehle 22px tha */
     font-weight:bold;
 }
 
 nav a{
     text-decoration:none;
     color:white;
-    margin-left:25px;
+    margin-left:30px;  /* pehle 25px tha */
+    font-size:20px;  /* naya - text bada */
+    font-weight:400;
     transition:0.3s;
 }
 
@@ -58,30 +62,35 @@ nav a:hover{
 }
 
 .hero h1{
-    font-size:50px;
-    margin-bottom:20px;
+    font-size:58px;  /* pehle 50px tha */
+    margin-bottom:25px;
+    font-weight:700;
 }
 
 .hero p{
-    font-size:20px;
-    max-width:600px;
-    margin-bottom:30px;
+    font-size:24px;  /* pehle 20px tha */
+    max-width:700px;
+    margin-bottom:35px;
+    line-height:1.6;
 }
 
 /* BUTTON */
 .btn{
-    padding:12px 30px;
+    padding:14px 35px;  /* pehle 12px 30px tha */
     border-radius:30px;
     background:#2563eb;
     color:white;
     text-decoration:none;
-    margin:10px;
+    margin:12px;
+    font-size:18px;  /* naya */
+    font-weight:500;
     display:inline-block;
     transition:0.3s;
 }
 
 .btn:hover{
     background:#38bdf8;
+    transform:scale(1.05);
 }
 
 /* SECTION */
@@ -92,7 +101,7 @@ nav a:hover{
 
 .section h2{
     margin-bottom:30px;
-    font-size:35px;
+    font-size:40px;  /* pehle 35px tha */
 }
 
 /* CARDS */
@@ -106,8 +115,8 @@ nav a:hover{
 .card{
     background:white;
     color:#111;
-    width:300px;
-    padding:25px;
+    width:320px;  /* pehle 300px tha */
+    padding:30px;  /* pehle 25px tha */
     border-radius:15px;
     box-shadow:0 10px 25px rgba(0,0,0,0.3);
     transition:0.4s;
@@ -117,48 +126,82 @@ nav a:hover{
     transform:translateY(-10px);
 }
 
-/* CONTACT */
+.card h3 {
+    font-size:24px;  /* naya - card heading */
+    margin-bottom:15px;
+}
+
+.card p {
+    font-size:18px;  /* naya - card text */
+    line-height:1.6;
+}
+
+/* CONTACT - exactly jaisa chahiye */
 .contact-box{
     background:white;
     color:#111;
-    padding:40px;
+    padding:50px;  /* pehle 40px tha */
     border-radius:15px;
-    width:400px;
+    width:450px;  /* pehle 400px tha */
     margin:auto;
 }
 
-input,textarea{
+.contact-box h2 {
+    font-size:32px;  /* naya */
+    margin-bottom:25px;
+}
+
+input, textarea{
     width:100%;
-    padding:12px;
-    margin-bottom:15px;
+    padding:15px;  /* pehle 12px tha */
+    margin-bottom:20px;  /* pehle 15px tha */
     border-radius:8px;
     border:1px solid #ccc;
+    font-size:18px;  /* naya - input text bada */
 }
 
 button{
     width:100%;
-    padding:12px;
+    padding:15px;  /* pehle 12px tha */
     border:none;
     border-radius:25px;
     background:#2563eb;
     color:white;
+    font-size:20px;  /* naya */
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover {
+    background:#38bdf8;
 }
 
 /* FOOTER */
 footer{
     text-align:center;
-    padding:20px;
+    padding:25px;  /* pehle 20px tha */
     background:#0f172a;
     margin-top:50px;
+    font-size:18px;  /* naya */
 }
 
 /* RESPONSIVE */
 @media(max-width:768px){
     header{
         padding:20px;
+        flex-direction:column;
+        gap:15px;
     }
     nav a{
-        margin-left:15px;
+        margin:0 10px;
+        font-size:18px;
+    }
+    .hero h1{
+        font-size:40px;
+    }
+    .hero p{
+        font-size:20px;
     }
     .cards{
         flex-direction:column;
@@ -166,5 +209,6 @@ footer{
     }
     .contact-box{
         width:90%;
+        padding:30px;
     }
 }
