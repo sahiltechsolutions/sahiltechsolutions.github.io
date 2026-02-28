@@ -212,3 +212,57 @@ footer{
         padding:30px;
     }
 }
+/* FONT SIZE FIX - Sab kuch bada karo */
+
+/* Navbar links specifically */
+nav a {
+    font-size: 22px !important;  /* pehle se bada */
+    font-weight: 500;
+    margin-left: 30px;
+}
+
+/* Hero section ka pura text */
+.hero h1 {
+    font-size: 64px !important;  /* aur bada */
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 28px !important;  /* pehle 24px tha */
+    max-width: 800px;
+    line-height: 1.5;
+}
+
+/* Buttons bade */
+.btn {
+    font-size: 22px !important;  /* pehle 18px tha */
+    padding: 16px 40px !important;
+}
+
+/* Logo bhi bada */
+.logo {
+    font-size: 32px !important;  /* pehle 28px tha */
+}
+
+/* Agar koi section heading ho */
+.section h2 {
+    font-size: 48px !important;
+}
+
+/* Contact page ke liye */
+.contact-box h2 {
+    font-size: 36px !important;
+}
+
+.contact-box label, 
+.contact-box input,
+.contact-box textarea,
+.contact-box button {
+    font-size: 20px !important;
+}
+
+/* Footer text */
+footer {
+    font-size: 20px !important;
+    padding: 25px;
+}
