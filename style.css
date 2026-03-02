@@ -1,268 +1,128 @@
-/* RESET */
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
-/* BODY */
 body{
-    background:linear-gradient(135deg,#0f172a,#1e293b);
-    color:white;
+  background:#fff;
+  color:#333;
 }
 
-/* TOP BAR - thoda bada */
-.topbar{
-    background:#2563eb;
-    text-align:center;
-    padding:12px;  /* pehle 8px tha */
-    font-size:22px;  /* pehle 20px tha */
-    font-weight:500;
-    letter-spacing:1px;
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  background:white;
+  position:sticky;
+  top:0;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
-/* NAVBAR */
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 60px;  /* pehle 20px tha */
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(10px);
+nav img{
+  height:50px;
 }
 
-.logo{
-    font-size:28px;  /* pehle 22px tha */
-    font-weight:bold;
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:30px;
 }
 
-nav a{
-    text-decoration:none;
-    color:white;
-    margin-left:30px;  /* pehle 25px tha */
-    font-size:20px;  /* naya - text bada */
-    font-weight:400;
-    transition:0.3s;
+nav ul li a{
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
 }
 
-nav a:hover{
-    color:#38bdf8;
+.hire-btn{
+  background:linear-gradient(45deg,#ff7a3d,#ff9966);
+  padding:10px 22px;
+  border-radius:30px;
+  color:white;
+  text-decoration:none;
+  font-weight:500;
 }
 
-/* HERO */
 .hero{
-    height:90vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 8%;
+  background:linear-gradient(45deg,#fff5ec,#ffe1cc);
 }
 
-.hero h1{
-    font-size:58px;  /* pehle 50px tha */
-    margin-bottom:25px;
-    font-weight:700;
+.hero-text{
+  width:50%;
 }
 
-.hero p{
-    font-size:24px;  /* pehle 20px tha */
-    max-width:700px;
-    margin-bottom:35px;
-    line-height:1.6;
+.hero-text h1{
+  font-size:42px;
+  color:#ff7a3d;
+  margin-bottom:20px;
 }
 
-/* BUTTON */
-.btn{
-    padding:14px 35px;  /* pehle 12px 30px tha */
-    border-radius:30px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    margin:12px;
-    font-size:18px;  /* naya */
-    font-weight:500;
-    display:inline-block;
-    transition:0.3s;
+.hero-text p{
+  margin-bottom:25px;
 }
 
-.btn:hover{
-    background:#38bdf8;
-    transform:scale(1.05);
+.main-btn{
+  background:linear-gradient(45deg,#ff7a3d,#ff9966);
+  padding:12px 28px;
+  border-radius:30px;
+  color:white;
+  text-decoration:none;
+  font-weight:500;
 }
 
-/* SECTION */
+.hero-img img{
+  width:300px;
+  border-radius:50%;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
 .section{
-    padding:80px 60px;
-    text-align:center;
+  padding:80px 8%;
+  text-align:center;
 }
 
-.section h2{
-    margin-bottom:30px;
-    font-size:40px;  /* pehle 35px tha */
-}
-
-/* CARDS */
 .cards{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:30px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  margin-top:40px;
 }
 
 .card{
-    background:white;
-    color:#111;
-    width:320px;  /* pehle 300px tha */
-    padding:30px;  /* pehle 25px tha */
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
-    transition:0.4s;
+  background:#fff;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+  width:30%;
 }
 
-.card:hover{
-    transform:translateY(-10px);
-}
-
-.card h3 {
-    font-size:24px;  /* naya - card heading */
-    margin-bottom:15px;
-}
-
-.card p {
-    font-size:18px;  /* naya - card text */
-    line-height:1.6;
-}
-
-/* CONTACT - exactly jaisa chahiye */
-.contact-box{
-    background:white;
-    color:#111;
-    padding:50px;  /* pehle 40px tha */
-    border-radius:15px;
-    width:450px;  /* pehle 400px tha */
-    margin:auto;
-}
-
-.contact-box h2 {
-    font-size:32px;  /* naya */
-    margin-bottom:25px;
-}
-
-input, textarea{
-    width:100%;
-    padding:15px;  /* pehle 12px tha */
-    margin-bottom:20px;  /* pehle 15px tha */
-    border-radius:8px;
-    border:1px solid #ccc;
-    font-size:18px;  /* naya - input text bada */
-}
-
-button{
-    width:100%;
-    padding:15px;  /* pehle 12px tha */
-    border:none;
-    border-radius:25px;
-    background:#2563eb;
-    color:white;
-    font-size:20px;  /* naya */
-    font-weight:600;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-button:hover {
-    background:#38bdf8;
-}
-
-/* FOOTER */
 footer{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:60px;
+}
+
+@media(max-width:900px){
+  .hero{
+    flex-direction:column;
     text-align:center;
-    padding:25px;  /* pehle 20px tha */
-    background:#0f172a;
-    margin-top:50px;
-    font-size:18px;  /* naya */
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-    header{
-        padding:20px;
-        flex-direction:column;
-        gap:15px;
-    }
-    nav a{
-        margin:0 10px;
-        font-size:18px;
-    }
-    .hero h1{
-        font-size:40px;
-    }
-    .hero p{
-        font-size:20px;
-    }
-    .cards{
-        flex-direction:column;
-        align-items:center;
-    }
-    .contact-box{
-        width:90%;
-        padding:30px;
-    }
-}
-/* FONT SIZE FIX - Sab kuch bada karo */
-
-/* Navbar links specifically */
-nav a {
-    font-size: 22px !important;  /* pehle se bada */
-    font-weight: 500;
-    margin-left: 30px;
-}
-
-/* Hero section ka pura text */
-.hero h1 {
-    font-size: 64px !important;  /* aur bada */
-    margin-bottom: 25px;
-}
-
-.hero p {
-    font-size: 28px !important;  /* pehle 24px tha */
-    max-width: 800px;
-    line-height: 1.5;
-}
-
-/* Buttons bade */
-.btn {
-    font-size: 22px !important;  /* pehle 18px tha */
-    padding: 16px 40px !important;
-}
-
-/* Logo bhi bada */
-.logo {
-    font-size: 32px !important;  /* pehle 28px tha */
-}
-
-/* Agar koi section heading ho */
-.section h2 {
-    font-size: 48px !important;
-}
-
-/* Contact page ke liye */
-.contact-box h2 {
-    font-size: 36px !important;
-}
-
-.contact-box label, 
-.contact-box input,
-.contact-box textarea,
-.contact-box button {
-    font-size: 20px !important;
-}
-
-/* Footer text */
-footer {
-    font-size: 20px !important;
-    padding: 25px;
+  }
+  .hero-text,.hero-img{
+    width:100%;
+  }
+  .cards{
+    flex-direction:column;
+  }
+  .card{
+    width:100%;
+  }
 }
